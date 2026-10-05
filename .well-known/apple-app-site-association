@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "THS7YAAW8D.com.kimtrinh.medisim-er"
+        ],
+        "components": [
+          {
+            "/": "/medisim",
+            "comment": "a shared MediSim ER case"
+          },
+          {
+            "/": "/medisim/*",
+            "comment": "a shared MediSim ER case"
+          }
+        ]
+      }
+    ]
+  }
+}
