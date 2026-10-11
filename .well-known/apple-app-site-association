@@ -8,11 +8,11 @@
         "components": [
           {
             "/": "/medisim",
-            "comment": "a shared MediSim ER case"
+            "comment": "a shared Resus Room case"
           },
           {
             "/": "/medisim/*",
-            "comment": "a shared MediSim ER case"
+            "comment": "a shared Resus Room case"
           }
         ]
       }

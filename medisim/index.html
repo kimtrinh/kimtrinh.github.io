@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MediSim ER — Can you save this patient?</title>
-<meta name="description" content="A patient is waiting in MediSim ER, the emergency medicine simulator for iPhone and iPad.">
+<title>Resus Room — Can you save this patient?</title>
+<meta name="description" content="A patient is waiting in Resus Room, the emergency medicine simulator for iPhone and iPad.">
 <meta name="apple-itunes-app" content="app-id=6816563720">
 <meta property="og:title" content="Can you save this patient?">
-<meta property="og:description" content="Open it in MediSim ER, the emergency medicine simulator for iPhone and iPad.">
+<meta property="og:description" content="Open it in Resus Room, the emergency medicine simulator for iPhone and iPad.">
 <style>
   :root { --bg: #050a18; --card: #0d1528; --line: #1d2a44; --text: #e6ecf5; --muted: #8b98ad; --emerald: #10b981; --cyan: #22d3ee; }
   * { box-sizing: border-box; }
@@ -33,14 +33,14 @@
     <p class="brand">MEDISIM ER</p>
     <h1>Can you save this patient?</h1>
     <p class="patient" id="patient" hidden></p>
-    <p class="complaint" id="complaint">A patient is waiting for you in MediSim ER.</p>
+    <p class="complaint" id="complaint">A patient is waiting for you in Resus Room.</p>
     <a class="store" href="https://apps.apple.com/app/id6816563720"><small>Download on the</small>App Store</a>
-    <p class="have">Already have MediSim ER? Open this link on your iPhone or iPad and the case opens in the app.</p>
+    <p class="have">Already have Resus Room? Open this link on your iPhone or iPad and the case opens in the app.</p>
   </div>
-  <footer>MediSim ER · by Kim Trinh, MD</footer>
+  <footer>Resus Room · by Kim Trinh, MD</footer>
 </main>
 <script>
-const CASES = {"1da9zwa":{"patient":"52-year-old man","complaint":"A man grabbed his chest and collapsed"},"1qosqyk":{"patient":"58-year-old man","complaint":"58-year-old man, witnessed collapse, CPR in progress on arrival"},"1pvj1kt":{"patient":"44-year-old man","complaint":"44-year-old man, arrested minutes after a central line attempt"},"19wbq9v":{"patient":"31-year-old woman","complaint":"31-year-old woman found down, no pulse on arrival"},"55yua2":{"patient":"76-year-old woman","complaint":"76-year-old woman, two blackouts today, grey and clammy on the trolley"},"p6x6uy":{"patient":"63-year-old man","complaint":"63-year-old man, racing heart for three hours, now grey and sweating"},"1u5so15":{"patient":"29-year-old woman","complaint":"29-year-old woman, heart racing for an hour, walked in talking"},"5wme02":{"patient":"24-year-old man","complaint":"24M — stab wound to the right groin, bleeding through the dressing"},"1ro18u":{"patient":"37-year-old woman","complaint":"37F — restrained driver, high-speed head-on crash, twenty minutes trapped"},"1ok7mhi":{"patient":"3-year-old girl","complaint":"3-year-old girl, 14 kg, two days of a harsh barking cough, now mottled and hard to wake"},"hs2fij":{"patient":"5-year-old boy","complaint":"5-year-old boy brought in fighting for breath, now exhausted and quiet"},"a1wrc":{"patient":"Newborn boy","complaint":"Newborn at 39 weeks — handed over floppy, no breathing effort, heart rate 50"},"1o467oo":{"patient":"Newborn girl","complaint":"Newborn at 40 weeks — thick stained fluid, limp with no respiratory effort, heart rate 70"}};
+const CASES = {"1da9zwa":{"patient":"52-year-old man","complaint":"A man grabbed his chest and collapsed"},"1qosqyk":{"patient":"58-year-old man","complaint":"58-year-old man, witnessed collapse, CPR in progress on arrival"},"1pvj1kt":{"patient":"44-year-old man","complaint":"44-year-old man, arrested minutes after a central line attempt"},"19wbq9v":{"patient":"31-year-old woman","complaint":"31-year-old woman found down, no pulse on arrival"},"55yua2":{"patient":"76-year-old woman","complaint":"76-year-old woman, two blackouts today, grey and clammy on the trolley"},"p6x6uy":{"patient":"63-year-old man","complaint":"63-year-old man, racing heart for three hours, now grey and sweating"},"1u5so15":{"patient":"29-year-old woman","complaint":"29-year-old woman, heart racing for an hour, walked in talking"},"1661wv6":{"patient":"49-year-old man","complaint":"49-year-old man in a leg cast, collapsed at the triage desk"},"5wme02":{"patient":"24-year-old man","complaint":"24M — stab wound to the right groin, bleeding through the dressing"},"1ro18u":{"patient":"37-year-old woman","complaint":"37F — restrained driver, high-speed head-on crash, twenty minutes trapped"},"1ok7mhi":{"patient":"3-year-old girl","complaint":"3-year-old girl, 14 kg, two days of a harsh barking cough, now mottled and hard to wake"},"hs2fij":{"patient":"5-year-old boy","complaint":"5-year-old boy brought in fighting for breath, now exhausted and quiet"},"a1wrc":{"patient":"Newborn boy","complaint":"Newborn at 39 weeks — handed over floppy, no breathing effort, heart rate 50"},"1o467oo":{"patient":"Newborn girl","complaint":"Newborn at 40 weeks — thick stained fluid, limp with no respiratory effort, heart rate 70"}};
 const c = CASES[new URLSearchParams(location.search).get('c') || ''];
 if (c) {
   const p = document.getElementById('patient');
